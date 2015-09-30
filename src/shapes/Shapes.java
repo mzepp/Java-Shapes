@@ -9,7 +9,9 @@ package shapes;
  *
  * @author Matt Zepp
  * @date 9/30/15
- * This application calculates the area of a rectangle, square, and triangle.
+ * @throws IOException
+ * @throws NumberFormatException
+ * This application calculates the area of a rectangle, square, and triangle using input from the command line.
  * Using the input from the user for the side lengths of the rectangle it will output the area.
  * Using the input from the user for the side length of the square it will output the area.
  * Using the input from the user for the height and base length of the triangle it will output the area.
@@ -71,7 +73,7 @@ public class Shapes {
             boolean badInput = true;
             while (badInput) { //run until user enters y or n
                 System.out.print("Would you like to run again (y/n)? ");
-                String yesno = new String(reader.readLine());
+                String yesno = reader.readLine();
                 if(yesno.compareTo("n") == 0 || yesno.compareTo("N") == 0) {
                     continueLoop = false;
                     badInput = false;
